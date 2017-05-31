@@ -1,0 +1,43 @@
+html{
+    background-image: url("pictures/Background.jpg");
+}
+
+body{
+    color: white;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+p{
+text-align: center;
+}
+
+#loginbutton{
+    margin-right: 70px;
+    margin-left: 10px;
+    border-radius: 4px;
+    box-shadow: 0 10px 16px 0 ;
+}
+
+#loginbutton:active{
+    transform: translateY(4px);
+}
+
+#CreateUserbutton{
+    border-radius: 4px;
+    box-shadow: 0 10px 16px 0 ;
+}
+
+#CreateUserbutton:active{
+    transform: translateY(4px);
+}
+#name{
+    background-color: gray;
+    border-color: gray;
+}
+#pass{
+    background-color: gray;
+    border-color: gray;
+}

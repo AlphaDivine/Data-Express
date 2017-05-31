@@ -1,0 +1,19 @@
+doctype
+html
+    head
+        link(rel = 'stylesheet', href = "style.css")
+        title Data Express
+    body
+        h1 Welcome to the Sign in Page!
+        h2 Please enter your information
+        form(method='', action='')
+            label(for='username') Username:
+            br
+            input(name='username', id='name')
+            p
+            label(for='password') Password:
+            br
+            input(name='password', id='pass', type='password')
+            p
+            input(type='submit',id = 'loginbutton', value='Login')
+            input(type='submit',id = 'CreateUserbutton', value='Register')
