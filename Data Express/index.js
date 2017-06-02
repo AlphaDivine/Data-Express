@@ -18,7 +18,7 @@ app.post('/edit/:id', urlencodedParser, route.editPerson);
 app.get('/delete/:id', route.delete);
 
 app.get('/',function(req, res){
-    res.render("Index");
+    res.render('Index');
 });
 
     app.listen(3000)
