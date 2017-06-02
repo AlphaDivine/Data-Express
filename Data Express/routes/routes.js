@@ -9,11 +9,14 @@ mdb.once('open', function (callback) {
 });
 
 var personSchema = mongoose.Schema({
-  first_name: String,
-  last_name: String,
+  user_name: String,
+  password: String,
   age: String,
-  victims: String,
-  species: String
+  email: String,
+  user_level: Boolean,
+  answer1: String,
+  answer2: String,
+  answer3: String
 });
 
 
@@ -39,15 +42,18 @@ exports.create = function (req, res) {
 
 exports.createPerson = function (req, res) {
   var person = new Person({
-    first_name: req.body.first_name,
-    last_name: req.body.last_name,
+    user_name: req.body.user_name,
+    password: req.body.password,
     age: req.body.age,
-    victims: req.body.victims,
-    species: req.body.species
+    email: req.body.email,
+    user_level: req.body.user_level,
+    answer1: req.body.answer1,
+    answer2: req.body.answer2,
+    answer3: req.body.answer3
   });
   person.save(function (err, person) {
     if (err) return console.error(err);
-    console.log(req.body.name + ' added');
+    console.log(req.body.user_name + ' added');
   });
   res.redirect('/');
 };
@@ -65,11 +71,14 @@ exports.edit = function (req, res) {
 exports.editPerson = function (req, res) {
   Person.findById(req.params.id, function (err, person) {
     if (err) return console.error(err);
-    person.first_name = req.body.first_name;
-    person.last_name = req.body.last_name;
+    person.user_name = req.body.user_name;
+    person.password = req.body.password;
     person.age = req.body.age;
-    person.victims  = req.body.victims;
-    person.species = req.body.species;
+    person.email  = req.body.email;
+    person.user_level = req.body.user_level;
+    person.answer1 = req.body.answer1;
+    person.answer2 = req.body.answer2;
+    person.answer3 = req.body.answer3;
     person.save(function (err, person) {
       if (err) return console.error(err);
       console.log(req.body.name + ' updated');
@@ -90,7 +99,7 @@ exports.details = function (req, res) {
   Person.findById(req.params.id, function (err, person) {
     if (err) return console.error(err);
     res.render('details', {
-      title: person.name + "'s Details",
+      title: person.user_name + "'s Details",
       person: person
     });
   });
