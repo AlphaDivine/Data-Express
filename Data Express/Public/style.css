@@ -44,3 +44,7 @@ text-align: center;
 #Name{
     color: pink;
 }
+canvas{
+    background-color: white;
+    margin-top: 50px;
+}
