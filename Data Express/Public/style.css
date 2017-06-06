@@ -58,6 +58,9 @@ canvas{
 #submitnewuser :active{
     transform: translateY(4px); 
 }
+#submitnewuser:hover{
+    background-color: white;
+}
 #loginbutton{
     margin-right: 70px;
     margin-left: 10px;
@@ -71,6 +74,9 @@ canvas{
 #loginbutton:active{
     transform: translateY(4px);
 }
+#loginbutton:hover{
+    background-color: white;
+}
 
 #CreateUserbutton{
     background: gray;
@@ -82,6 +88,9 @@ canvas{
 
 #CreateUserbutton:active{
     transform: translateY(4px);
+}
+#CreateUserbutton:hover{
+    background-color: white;
 }
 #my_canvas{
 margin-right: 100px;
