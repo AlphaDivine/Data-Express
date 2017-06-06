@@ -1,0 +1,24 @@
+
+block content
+  form(id='form', method='post', action='/create')
+    label(for='first_name') First Name: 
+    input(type='text', name='first_name')
+    br
+    label(for='last_name') Last Name: 
+    input(type='text', name='last_name')
+    br
+    label(for='age') Age: 
+    input(type='text', name='age')
+    br
+    label(for='victims') Victims: 
+    input(type='text', name='victims')
+    br
+    label(for='species') Species: 
+    select(name='species')
+      option(value="Human") Human
+      option(value="Vampire") Vampire
+      option(value="Werewolf") Werewolf
+      option(value="Zombie") Zombie
+    br
+    input(type='submit', value='Add Person')
+//this is how beatty created his new database things. 
