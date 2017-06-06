@@ -1,3 +1,4 @@
+//CREATE
 
 block content
   form(id='form', method='post', action='/create')
@@ -22,3 +23,62 @@ block content
     br
     input(type='submit', value='Add Person')
 //this is how beatty created his new database things. 
+
+
+//LIST
+
+block content
+  table(class='gridtable')
+    tr
+      th Id
+      th First Name
+      th Last Name
+      th Age
+      th Victims
+      th Species
+      th 
+      th 
+    each item in people
+      tr
+        td
+          a(href='/details/' + item.id) #{item.id}
+        td #{item.first_name}
+        td #{item.last_name}
+        td #{item.age}
+        td #{item.victims}
+        td #{item.species}
+        td
+          a(href='/edit/' + item.id) Edit
+        td
+          a(href='/delete/' + item.id) Delete
+
+  
+//EDIT 
+
+
+block content
+  form(id='form', method='post', action='/edit/' + person.id)
+    label(for='first_name') First Name: 
+    input(type='text', name='first_name' value=person.first_name)
+    br
+    label(for='last_name') Last Name: 
+    input(type='text', name='last_name' value=person.last_name)
+    br
+    label(for='age') Age: 
+    input(type='text', name='age' value=person.age)
+    br
+    label(for='victims') Victims: 
+    input(type='text', name='victims' value=person.victims)
+    br
+    label(for='species') Species:
+    select(name='species')
+      option(selected = person.species) #{person.species}
+
+      option(value="Human") Human
+      option(value="Vampire") Vampire
+      option(value="Werewolf") Werewolf
+      option(value="Zombie") Zombie
+    br
+    input(type='submit', value='Update Person')
+
+    
