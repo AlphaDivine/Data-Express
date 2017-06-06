@@ -1,7 +1,7 @@
 var express = require('express'),
     pug = require('pug'),
     path = require('path'),
-    route = require('./routes/routes.js');
+    route = require('./routes/routes.js'),
     bodyParser = require('body-parser');
     
 var app = express();
