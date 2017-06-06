@@ -21,11 +21,8 @@ text-align: center;
     background-color: gray;
     border-color: gray;
 }
-#Name{
-    color: pink;
-}
 canvas{
-    background-color: white;
+    background-color: gray;
     margin-top: 50px;
 }
 #age{
