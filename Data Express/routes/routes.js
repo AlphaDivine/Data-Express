@@ -24,7 +24,7 @@ var Person = mongoose.model('People_Collection', personSchema);
 
 var Hard_Admin = new Person({
   user_name: 'admin',
-  password: 'password',
+  password: 'pass',
   age: null,
   email: null,
   user_level: 'admin',
