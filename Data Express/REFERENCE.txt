@@ -81,4 +81,47 @@ block content
     br
     input(type='submit', value='Update Person')
 
+
+Quentins thing
+
+<canvas id="myCanvas" width="600" height="600" style="border:1px solid #dddddd;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var theCanvas=document.getElementById("myCanvas");
+            var theContext=theCanvas.getContext("2d");
+            var sales=[52, 48, 74, 31, 47, 25, 67, 78, 45, 75, 85];
+            var gHeight=100;
+            var gWidth=100;
+            var unitSpacing=10;
+            var border=1;
+            var scalar=1;
+            var spaceCount = border;
+            
+            function drawBox() {
+                theContext.fillStyle = "rgb(1, 0, 85)";
+                theContext.fillRect(border * scalar, border * scalar, gHeight * scalar, gWidth * scalar);
+            }
+            drawBox();
+            
+            function fillGraph() {
+                theContext.fillStyle = "rgb(1, 0, 255)";
+                
+                theContext.beginPath();
+                theContext.moveTo(border * scalar, gHeight * scalar);
+                for (i = 0; i < sales.length; i++){
+                    theContext.lineTo(spaceCount * scalar, gHeight - (sales[i] * scalar));
+                    spaceCount += (unitSpacing * scalar);
+                }
+                theContext.lineTo(spaceCount - unitSpacing, gHeight);
+                theContext.lineTo(0 * scalar, gHeight * scalar)
+                theContext.fill();
+            }
+            fillGraph();
+            
+            
+        </script>
+
+
+
     
