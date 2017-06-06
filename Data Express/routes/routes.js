@@ -22,6 +22,17 @@ var personSchema = mongoose.Schema({
 
 var Person = mongoose.model('People_Collection', personSchema);
 
+var Hard_Admin = new Person({
+  user_name: 'admin',
+  password: 'password',
+  age: null,
+  email: null,
+  user_level: 'admin',
+  answer1: null,
+  answer2: null,
+  answer3: null
+
+});
 
 
 exports.index = function (req, res) {
