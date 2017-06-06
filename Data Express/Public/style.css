@@ -13,32 +13,6 @@ h1{
 p{
 text-align: center;
 }
-
-#loginbutton{
-    margin-right: 70px;
-    margin-left: 10px;
-    background: gray;
-    color: black;
-    border-radius: 4px;
-    border: solid 1px;
-    box-shadow: 0 1px 0;
-}
-
-#loginbutton:active{
-    transform: translateY(4px);
-}
-
-#CreateUserbutton{
-    background: gray;
-    color: black;
-    border-radius: 4px;
-    border: solid 1px;
-    box-shadow: 0 1px 0;
-}
-
-#CreateUserbutton:active{
-    transform: translateY(4px);
-}
 #name{
     background-color: gray;
     border-color: gray;
@@ -83,4 +57,38 @@ canvas{
 }
 #submitnewuser :active{
     transform: translateY(4px); 
+}
+#loginbutton{
+    margin-right: 70px;
+    margin-left: 10px;
+    background: gray;
+    color: black;
+    border-radius: 4px;
+    border: solid 1px;
+    box-shadow: 0 1px 0;
+}
+
+#loginbutton:active{
+    transform: translateY(4px);
+}
+
+#CreateUserbutton{
+    background: gray;
+    color: black;
+    border-radius: 4px;
+    border: solid 1px;
+    box-shadow: 0 1px 0;
+}
+
+#CreateUserbutton:active{
+    transform: translateY(4px);
+}
+#my_canvas{
+margin-right: 100px;
+}
+#my_canvas1{
+
+}
+#my_canvas2{
+margin-left: 100px;
 }
