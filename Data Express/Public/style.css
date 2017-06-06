@@ -92,3 +92,7 @@ margin-right: 100px;
 #my_canvas2{
 margin-left: 100px;
 }
+::-webkit-input-placeholder{
+    opacity: .5;
+    color: black;
+}
