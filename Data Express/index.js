@@ -26,5 +26,11 @@ app.get('/',function(req, res){
     res.render('Index');
 });
 
+app.get('/createUser',function(req, res){
+    res.render('createUser');
+});
+app.get('/User',function(req,res){
+    res.render('User');
+});
     app.listen(3000)
 

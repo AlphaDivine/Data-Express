@@ -5,8 +5,8 @@ html
         link(href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAADAwNQAgIC/wICAv8CAgL/AgIC/wICAv8CAgL/AgIC/wICAv8CAgL/AgIC/wICAv8CAgL/AgIC/wICAv8AAAAABQUF/wUFBf8DAwNwAgICgAICAoACAgKAAgICgAICAoACAgKAAgICgAICAoACAgKAAgICgAMDA4AFBQX/AAAAAAkJCf8JCQn/BQUFgAUFBf8FBQX/BQUF/wUFBf8FBQX/BQUF/wUFBf8FBQX/BQUF/wUFBf8FBQWACQkJ/wAAAAAMDAz/DAwM/wkJCYAJCQn/CQkJ/wkJCf8JCQn/CQkJ/wkJCf8JCQn/CQkJ/wkJCb8JCQn/CQkJgAwMDP8AAAAADg4OQA8PD/8NDQ2ADQ0N/w0NDf8NDQ3/DQ0N/w0NDf8NDQ3/DQ0N/w0NDf8NDQ3/DQ0N/w0NDYAPDw//AAAAAAAAAAASEhL/ERERgBEREf8RERH/EBAQ7xAQEIAPDw9ADw8PMBAQEIAQEBDvERER/xEREf8RERGAEhIS/wAAAAAAAAAAFRUV/xUVFYAVFRX/FBQU7xEREUAGBga/BQUF/wUFBf8GBga/ERERQBQUFO8VFRX/FRUVgBUVFf8AAAAAAAAAABkZGf8ZGRmAGRkZ/xgYGIAPDw+/Dg4O/w4ODv8ODg7/Dg4O/w8PD78YGBiAGRkZ/xkZGYAZGRn/AAAAAAAAAAAcHBz/HBwcgBwcHP8cHBxAFhYW/xYWFv8VFRWAFRUVgBYWFv8AAAAAAAAAAAAAAAAAAAAAHBwc/wAAAAAAAAAAHx8f/yAgIIAgICD/ICAgQB8fH/8fHx//ICAggCAgIIAfHx//AAAAAAAAAAAAAAAAAAAAAB8fH/8AAAAAAAAAACIiIv8kJCSAJCQk/yQkJIAnJye/Jycn/ycnJ/8nJyf/Jycn/ycnJ78kJCSAJCQk/yQkJIAiIiL/AAAAACYmJlAlJSX/KCgogCgoKP8oKCjvKioqQC8vL78wMDD/MDAw/y8vL78qKipAKCgo7ygoKP8oKCiAJSUl/wAAAAAoKCj/KCgo/ywsLIAsLCz/LCws/ywsLO8sLCyALS0tQC0tLUAsLCyALCws7ywsLP8sLCz/LCwsgCgoKP8AAAAALCws/ywsLP8wMDCAMDAw/zAwMP8wMDD/MDAw/zAwMP8wMDD/MDAw/zAwMP8wMDD/MDAw/zAwMIAsLCz/AAAAAC8vL/8vLy//MTExcDMzM4AzMzOAMzMzgDMzM4AzMzOAMzMzgDMzM4AzMzOAMzMzgDMzM4AxMTGALy8v/wAAAAAxMTFQMjIy/zIyMv8yMjL/MjIy/zIyMv8yMjL/MjIy/zIyMv8yMjL/MjIy/zIyMv8yMjL/MjIy/zIyMv8AAAAAgAEAACABAAAAAQAAAAEAAIABAACBgQAAhCEAAIABAACIPQAAiD0AAIABAACEIQAAAYEAAAABAAAgAQAAgAEAAA==" rel="icon" type="image/x-icon")
         title Data Express
     body
-        h1 Welcome to the Sign in Page!
-        h2 Please enter your information
+        h1 Welcome to the Create A User Page!
+        h2 Please fill out all the spaces
         form(method='', action='')
             label(for='username') Username:
             br
@@ -14,9 +14,40 @@ html
             p
             label(for='password') Password:
             br
-            input(name='password', id='pass', type='password')
+            input(name='password', id='pass', type='password',)
             p
-            a(class='button',id = 'loginbutton', href='') Login
-            a(class='button',id = 'CreateUserbutton', href='/createUser') Register
+            label(for='email') Email:
+            br
+            input(name='email', id='email')
+            p
+            label(for='age') Age:
+            br
+            input(name='age', id='age')
+            p
+            label(for='question1') What is your favorite animal? :
+            br
+            select(class='choose',id='question1')
+                option(value=0) Panda
+                option(value=1) Lion
+                option(value=2) Chicken
+                option(value=3) Monkey
+            p
+            label(for='question2') What is your favorite sport? :
+            br
+            select(class='choose',id='question2')
+                option(value=0) Soccer
+                option(value=1) Baseball
+                option(value=2) Football
+                option(value=3) Ultimate Frisbee
+            p
+            label(for='question3') What is your favorite video game genre
+            br
+            select(class='choose',id='question3')
+                option(value=0) First Person Shooter
+                option(value=1) RPG
+                option(value=2) Strategy
+                option(value=3) Sports
+            p
+            a(class='button',id = 'submitnewuser', href='/User') Submit
 
-canvas(id = 'my_canvas', width = '300', height = '200')
+
