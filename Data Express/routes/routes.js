@@ -85,7 +85,6 @@ exports.editPerson = function (req, res) {
     });
   });
   res.redirect('/');
-
 };
 
 exports.delete = function (req, res) {
