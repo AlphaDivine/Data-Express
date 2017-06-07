@@ -7,7 +7,7 @@ html
     body
         h1 Welcome to the Sign in Page!
         h2 Please enter your information
-        form(method='', action='')
+        form(method='post', action='/')
             label(for='username') Username:
             br
             input(name='username', id='name', placeholder="Enter your name here")
@@ -16,7 +16,7 @@ html
             br
             input(name='password', id='pass', placeholder="Enter your password here" type='password')
             p
-            a(class='button',id = 'loginbutton', href='') Login
+            input(type='submit',class='button',id = 'loginbutton', value='Login')
             a(class='button',id = 'CreateUserbutton', href='/createUser') Register
 
 canvas(id = 'my_canvas', width = '300', height = '200')
