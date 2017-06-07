@@ -13,7 +13,7 @@ var personSchema = mongoose.Schema({
   password: String,
   age: String,
   email: String,
-  user_level: Boolean,
+  isAdmin: Boolean,
   answer1: String,
   answer2: String,
   answer3: String
@@ -27,7 +27,7 @@ var Hard_Admin = new Person({
   password: 'pass',
   age: null,
   email: null,
-  user_level: true,
+  isAdmin: true,
   answer1: null,
   answer2: null,
   answer3: null
@@ -68,7 +68,7 @@ exports.createPerson = function (req, res) {
     password: req.body.password,
     age: req.body.age,
     email: req.body.email,
-    user_level: req.body.user_level,
+    isAdmin: req.body.isAdmin,
     answer1: req.body.answer1,
     answer2: req.body.answer2,
     answer3: req.body.answer3
@@ -97,7 +97,7 @@ exports.editPerson = function (req, res) {
     person.password = req.body.password;
     person.age = req.body.age;
     person.email  = req.body.email;
-    person.user_level = req.body.user_level;
+    person.isAdmin = req.body.isAdmin;
     person.answer1 = req.body.answer1;
     person.answer2 = req.body.answer2;
     person.answer3 = req.body.answer3;
@@ -125,3 +125,20 @@ exports.details = function (req, res) {
     });
   });
 };
+
+exports.loginInfo = function (req, res) {
+  Person.findOne({"user_name": req.body.user_name}, function(err, person) {
+    console.log(person.password)
+  });
+};
+
+
+exports.isAdmin = function (req, res) {
+  Person.findOne({"user_name": req.body.user_name}, function(err, person) {
+    res.render('Index', {
+      People: person.isAdmin 
+    });
+    
+  });
+};
+
