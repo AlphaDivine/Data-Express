@@ -53,7 +53,7 @@ app.get('/User',function(req,res){
     res.render('User');
 });
 // app.get('/Admin',function(req,res){
-//     res.render('Welcome ' + req.session.user.username + "!")
+//     res.render('Welcome ' + req.body.user_name + "!")
 // });
     app.listen(3000)
 
