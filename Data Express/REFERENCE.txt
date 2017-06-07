@@ -122,6 +122,10 @@ Quentins thing
             
         </script>
 
+//SEARCH 
 
+Kitten.find({ name: /^fluff/ }, callback);
+//This performs a search for all documents with a name property that 
+//begins with "Fluff" and returns the result as an array of kittens to the callback.
 
     

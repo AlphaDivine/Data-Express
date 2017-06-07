@@ -113,7 +113,11 @@ app.get('/Admin',checkAuth,function(req,res){
     res.render('Admin');
 });
 // app.get('/Admin',function(req,res){
+
+//     res.render('Welcome ' + req.body.user_name + "!")
+
 //    res.render('Welcome ' + req.session.user.username + "!")
+
 // });
 
 // logs out the user by destroying the session
