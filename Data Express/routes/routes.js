@@ -27,12 +27,23 @@ var Hard_Admin = new Person({
   password: 'pass',
   age: null,
   email: null,
-  user_level: 'admin',
+  user_level: true,
   answer1: null,
   answer2: null,
   answer3: null
 
 });
+
+// exports.checkIfAdmin = function(req,res){
+
+//   return Person.find({ user_name : Hard_Admin.user_name },function(err, person) {
+//      if (err) return console.error(err);
+//      console.log("un"+person.user_name);
+//      console.log("arg"+arguments[0]);
+    
+//   });
+// };
+
 
 
 exports.index = function (req, res) {

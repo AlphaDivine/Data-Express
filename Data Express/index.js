@@ -49,6 +49,7 @@ var urlencodedParser = bodyParser.urlencoded({
 app.post('/', urlencodedParser, function (req, res) {
     console.log(req.body.username);
     console.log(req.body.password);
+    //console.log("app "+route.checkIfAdmin("admin",));
 
     // toHash(req.body.password);
     // setTimeout(function(){
