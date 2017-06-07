@@ -9,7 +9,7 @@ mdb.once('open', function (callback) {
 });
 
 var personSchema = mongoose.Schema({
-  user_name: String,
+  username: String,
   password: String,
   age: String,
   email: String,
@@ -23,7 +23,7 @@ var personSchema = mongoose.Schema({
 var Person = mongoose.model('People_Collection', personSchema);
 
 var Hard_Admin = new Person({
-  user_name: 'admin',
+  username: 'admin',
   password: 'pass',
   age: null,
   email: null,
@@ -64,7 +64,7 @@ exports.create = function (req, res) {
 
 exports.createPerson = function (req, res) {
   var person = new Person({
-    user_name: req.body.user_name,
+    username: req.body.username,
     password: req.body.password,
     age: req.body.age,
     email: req.body.email,
@@ -83,7 +83,7 @@ exports.createPerson = function (req, res) {
 exports.edit = function (req, res) {
   Person.findById(req.params.id, function (err, person) {
     if (err) return console.error(err);
-    res.render('edit', {
+    res.render('Admin', {
       title: 'Edit Person',
       person: person
     });
@@ -93,7 +93,7 @@ exports.edit = function (req, res) {
 exports.editPerson = function (req, res) {
   Person.findById(req.params.id, function (err, person) {
     if (err) return console.error(err);
-    person.user_name = req.body.user_name;
+    person.username = req.body.username;
     person.password = req.body.password;
     person.age = req.body.age;
     person.email  = req.body.email;
@@ -119,7 +119,7 @@ exports.delete = function (req, res) {
 exports.details = function (req, res) {
   Person.findById(req.params.id, function (err, person) {
     if (err) return console.error(err);
-    res.render('details', {
+    res.render('Admin', {
       title: person.user_name + "'s Details",
       person: person
     });
@@ -127,14 +127,14 @@ exports.details = function (req, res) {
 };
 
 exports.loginInfo = function (req, res) {
-  Person.findOne({"user_name": req.body.user_name}, function(err, person) {
+  Person.findOne({"username": req.body.username}, function(err, person) {
     console.log(person.password)
   });
 };
 
 
 exports.isAdmin = function (req, res) {
-  Person.findOne({"user_name": req.body.user_name}, function(err, person) {
+  Person.findOne({"username": req.body.username}, function(err, person) {
     res.render('Index', {
       People: person.isAdmin 
     });
